@@ -41,6 +41,7 @@ const FixedContainer = styled.div<{ showMenu: boolean; height: number }>`
   height: ${({ height }) => `${height}px`};
   width: 100%;
   z-index: 20;
+  display: none;
 `;
 
 const TopBannerContainer = styled.div<{ height: number }>`
