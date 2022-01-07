@@ -9,13 +9,15 @@ import { UserMenuItem } from "./styles";
 
 export const StyledUserMenu = styled(Flex)`
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.tertiary};
-  border-radius: 16px;
+  // background-color: ${({ theme }) => theme.colors.tertiary};
+  background-color: transparent;
+  border: 2px solid ${({ theme }) => theme.colors.primary};
+  border-radius: 8px;
   box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   display: inline-flex;
-  height: 32px;
-  padding-left: 40px;
+  height: 42px;
+  padding-left: 8px;
   padding-right: 8px;
   position: relative;
 
@@ -26,7 +28,7 @@ export const StyledUserMenu = styled(Flex)`
 
 export const LabelText = styled.div`
   color: ${({ theme }) => theme.colors.text};
-  display: none;
+  // display: none;
   font-weight: 600;
 
   ${({ theme }) => theme.mediaQueries.sm} {
@@ -38,12 +40,12 @@ export const LabelText = styled.div`
 
 const Menu = styled.div<{ isOpen: boolean }>`
   background-color: ${({ theme }) => theme.card.background};
-  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
-  border-radius: 16px;
+  border: 1px solid ${({ theme }) => theme.colors.primary};
+  border-radius: 6px;
   padding-bottom: 4px;
   padding-top: 4px;
   pointer-events: auto;
-  width: 280px;
+  width: 180px;
   visibility: visible;
   z-index: 1001;
 
@@ -74,7 +76,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
   const [isOpen, setIsOpen] = useState(false);
   const [targetRef, setTargetRef] = useState<HTMLDivElement | null>(null);
   const [tooltipRef, setTooltipRef] = useState<HTMLDivElement | null>(null);
-  const accountEllipsis = account ? `${account.substring(0, 2)}...${account.substring(account.length - 4)}` : null;
+  const accountEllipsis = account ? `${account.substring(0, 5)}...${account.substring(account.length - 4)}` : null;
   const { styles, attributes } = usePopper(targetRef, tooltipRef, {
     strategy: "fixed",
     placement: "bottom-end",
@@ -110,7 +112,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
           setIsOpen((s) => !s);
         }}
       >
-        <MenuIcon avatarSrc={avatarSrc} variant={variant} />
+        {/* <MenuIcon avatarSrc={avatarSrc} variant={variant} /> */}
         <LabelText title={text || account}>{text || accountEllipsis}</LabelText>
         <ChevronDownIcon color="text" width="24px" />
       </StyledUserMenu>
