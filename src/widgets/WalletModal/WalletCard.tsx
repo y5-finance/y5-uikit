@@ -21,6 +21,7 @@ const WalletButton = styled(Button).attrs({ width: "100%", variant: "text", py: 
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
+  border: none;
 `;
 
 interface MoreWalletCardProps extends ButtonProps {
