@@ -16,7 +16,7 @@ export const UserMenuItem = styled.button<UserMenuItemProps>`
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   display: flex;
   font-size: 16px;
-  height: 48px;
+  height: 34px;
   justify-content: space-between;
   outline: 0;
   padding-left: 16px;
@@ -24,7 +24,8 @@ export const UserMenuItem = styled.button<UserMenuItemProps>`
   width: 100%;
 
   &:hover:not(:disabled) {
-    background-color: ${({ theme }) => theme.colors.tertiary};
+    // background-color: ${({ theme }) => theme.colors.tertiary};
+    background-color: transparent;
   }
 
   &:active:not(:disabled) {
