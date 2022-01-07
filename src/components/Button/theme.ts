@@ -6,7 +6,7 @@ export const scaleVariants = {
     padding: "0 24px",
   },
   [scales.SM]: {
-    height: "32px",
+    height: "44px",
     padding: "0 16px",
   },
   [scales.XS]: {
@@ -22,11 +22,11 @@ export const styleVariants = {
     color: "white",
   },
   [variants.SECONDARY]: {
-    backgroundColor: "transparent",
+    backgroundColor: "backgroundAlt",
     border: "2px solid",
     borderColor: "primary",
     boxShadow: "none",
-    color: "primary",
+    color: "white",
     ":disabled": {
       backgroundColor: "transparent",
     },
