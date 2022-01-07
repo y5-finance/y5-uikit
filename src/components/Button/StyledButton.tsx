@@ -25,7 +25,7 @@ const getDisabledStyles = ({ $isLoading, theme }: TransientButtonProps) => {
     &:disabled,
     &.pancake-button--disabled {
       background-color: ${theme.colors.backgroundDisabled};
-      border-color: ${theme.colors.backgroundDisabled};
+      border: 2px solid #36600b;
       box-shadow: none;
       color: ${theme.colors.textDisabled};
       cursor: not-allowed;
@@ -45,8 +45,8 @@ const getOpacity = ({ $isLoading = false }: TransientButtonProps) => {
 
 const StyledButton = styled.button<BaseButtonProps>`
   align-items: center;
-  border: 0;
-  border-radius: 16px;
+  border: 2px solid;
+  border-radius: 8px;
   box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;
   cursor: pointer;
   display: inline-flex;
