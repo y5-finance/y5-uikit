@@ -19,14 +19,14 @@ export const scaleVariants = {
 export const styleVariants = {
   [variants.PRIMARY]: {
     backgroundColor: "primary",
-    color: "white",
+    color: "text",
   },
   [variants.SECONDARY]: {
     backgroundColor: "backgroundAlt",
     border: "2px solid",
     borderColor: "primary",
     boxShadow: "none",
-    color: "white",
+    color: "text",
     ":disabled": {
       backgroundColor: "transparent",
     },

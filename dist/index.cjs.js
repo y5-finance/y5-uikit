@@ -211,14 +211,14 @@ var scaleVariants$1 = (_a$4 = {},
 var styleVariants$2 = (_b$3 = {},
     _b$3[variants$5.PRIMARY] = {
         backgroundColor: "primary",
-        color: "white",
+        color: "text",
     },
     _b$3[variants$5.SECONDARY] = {
         backgroundColor: "backgroundAlt",
         border: "2px solid",
         borderColor: "primary",
         boxShadow: "none",
-        color: "white",
+        color: "text",
         ":disabled": {
             backgroundColor: "transparent",
         },
@@ -2144,8 +2144,11 @@ var getBorderColor = function (_a) {
     }
     return theme.colors.cardBorder;
 };
-var StyledCard = styled__default['default'].div(templateObject_3$a || (templateObject_3$a = __makeTemplateObject(["\n  background: ", ";\n  border-radius: ", ";\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ", "\n\n  padding: 1px 1px 3px 1px;\n\n  ", "\n"], ["\n  background: ", ";\n  border-radius: ", ";\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ",
+var StyledCard = styled__default['default'].div(templateObject_3$a || (templateObject_3$a = __makeTemplateObject(["\n  // background: ", ";\n  background: transparent;\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ", "\n\n  padding: 1px 1px 3px 1px;\n\n  ", "\n"], ["\n  // background: ", ";\n  background: transparent;\n  border: 2px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ",
     "\n\n  padding: 1px 1px 3px 1px;\n\n  ", "\n"])), getBorderColor, function (_a) {
+    var theme = _a.theme;
+    return theme.colors.primary;
+}, function (_a) {
     var theme = _a.theme;
     return theme.radii.card;
 }, function (_a) {
@@ -2155,7 +2158,7 @@ var StyledCard = styled__default['default'].div(templateObject_3$a || (templateO
     var isActive = _a.isActive;
     return isActive && styled.css(templateObject_2$o || (templateObject_2$o = __makeTemplateObject(["\n      animation: ", " 3s ease infinite;\n      background-size: 400% 400%;\n    "], ["\n      animation: ", " 3s ease infinite;\n      background-size: 400% 400%;\n    "])), PromotedGradient);
 }, styledSystem.space);
-var StyledCardInner = styled__default['default'](Box)(templateObject_4$7 || (templateObject_4$7 = __makeTemplateObject(["\n  width: 100%;\n  height: 100%;\n  overflow: ", ";\n  background: ", ";\n  border-radius: ", ";\n"], ["\n  width: 100%;\n  height: 100%;\n  overflow: ", ";\n  background: ", ";\n  border-radius: ", ";\n"])), function (_a) {
+var StyledCardInner = styled__default['default'](Box)(templateObject_4$7 || (templateObject_4$7 = __makeTemplateObject(["\n  width: 100%;\n  height: 100%;\n  overflow: ", ";\n  // background: ", ";\n  background: transparent;\n  border-radius: ", ";\n"], ["\n  width: 100%;\n  height: 100%;\n  overflow: ", ";\n  // background: ", ";\n  background: transparent;\n  border-radius: ", ";\n"])), function (_a) {
     var hasCustomBorder = _a.hasCustomBorder;
     return (hasCustomBorder ? "initial" : "inherit");
 }, function (_a) {
@@ -2818,10 +2821,10 @@ var PancakeToggle = function (_a) {
 
 var baseColors = {
     failure: "#ED4B9E",
-    primary: "#5FA11D",
+    primary: "#59A52C",
     primaryBright: "#53DEE9",
     primaryDark: "#0098A1",
-    secondary: "#7645D9",
+    secondary: "#58911d",
     success: "#31D0AA",
     warning: "#FFB237",
 };
@@ -2841,7 +2844,7 @@ var lightColors = __assign(__assign(__assign({}, baseColors), additionalColors),
         violetAlt: "linear-gradient(180deg, #CBD7EF 0%, #9A9FD0 100%)",
         gold: "linear-gradient(180deg, #FFD800 0%, #FDAB32 100%)",
     } });
-var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { secondary: "#9A6AFF", background: "#08060B", backgroundDisabled: "#3c3742", backgroundAlt: "#424242", backgroundAlt2: "rgba(39, 38, 44, 0.7)", cardBorder: "#383241", contrast: "#FFFFFF", dropdown: "#1E1D20", dropdownDeep: "#100C18", invertedContrast: "#191326", input: "#372F47", inputSecondary: "#262130", primaryDark: "#0098A1", tertiary: "#353547", text: "#F4EEFF", textDisabled: "#666171", textSubtle: "#B8ADD2", disabled: "#524B63", gradients: {
+var darkColors = __assign(__assign(__assign({}, baseColors), additionalColors), { secondary: "#58911d", background: "#08060B", backgroundDisabled: "#3c3742", backgroundAlt: "#424242", backgroundAlt2: "rgba(39, 38, 44, 0.7)", cardBorder: "#383241", contrast: "#FFFFFF", dropdown: "#1E1D20", dropdownDeep: "#100C18", invertedContrast: "#191326", input: "#372F47", inputSecondary: "#262130", primaryDark: "#0098A1", tertiary: "#353547", text: "#d9d9d9", textDisabled: "#666171", textSubtle: "#B8ADD2", disabled: "#524B63", gradients: {
         bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
         inverseBubblegum: "linear-gradient(139.73deg, #3D2A54 0%, #313D5C 100%)",
         cardHeader: "linear-gradient(166.77deg, #3B4155 0%, #3A3045 100%)",
