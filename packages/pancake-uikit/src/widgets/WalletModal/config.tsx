@@ -62,5 +62,5 @@ const connectors: Config[] = [
 ];
 
 export default connectors;
-export const connectorLocalStorageKey = "connectorIdv2";
+export const connectorLocalStorageKey = "y5-connectorId";
 export const walletLocalStorageKey = "wallet";
